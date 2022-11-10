@@ -9,6 +9,7 @@ import java.util.List;
  */
 public interface OrderService {
     /**
+     * 장바구니 담기<p>
      * 장바구니에 상품을 저장한다.
      * @param product 장바구니에 넣을 상품
      * @return 현재 장바구니에 담겨있는 상품들
@@ -20,6 +21,19 @@ public interface OrderService {
        데이터 때문에 결합도가 높아지는 것이 문제가 될 수 있을 것 같은데
      */
 
+    /**
+     * 주문하기<p>
+     * 장바구니에 있는 상품을 주문한다.
+     * @param cart 주문할 상품 목록
+     * @return 주문 내역
+     */
+    Order order(List<Product> cart);
 
-
+    /**
+     * 취소하기 <p>
+     * 주문을 취소한다.
+     * @param order
+     * @return
+     */
+    int orderCancel(Order order);
 }

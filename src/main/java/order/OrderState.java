@@ -11,7 +11,8 @@ public enum OrderState {
     EXCHANGE("교환"),
     EXCHANGE_DONE("교환완료"),
     RETURN("반품"),
-    RETURN_DONE("반품완료");
+    RETURN_DONE("반품완료"),
+    FAIL("주문실패");
 
     private final String state;
 
